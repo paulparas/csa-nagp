@@ -1,0 +1,65 @@
+
+    
+      <div>
+        <h2>Existing Policies</h2>
+        <!--add for following columns 'policyId', 'policyName', 'policyType', 'policyStartDate', 'policyEndDate', 'coverageAmount', 'status'--> 
+        <table mat-table [dataSource]="policies" class="mat-elevation-z8">
+          <ng-container matColumnDef="policyId">
+            <th mat-header-cell *matHeaderCellDef> Policy Number </th>
+            <td mat-cell *matCellDef="let policy"> {{ policy.policyId }} </td>
+          </ng-container>
+      
+          <ng-container matColumnDef="policyName">
+            <th mat-header-cell *matHeaderCellDef> Policy Name </th>
+            <td mat-cell *matCellDef="let policy"> {{ policy.policyName }} </td>
+          </ng-container>
+      
+          <ng-container matColumnDef="coverageAmount">
+            <th mat-header-cell *matHeaderCellDef> Coverage Amount </th>
+            <td mat-cell *matCellDef="let policy"> {{ policy.coverageAmount }} </td>
+          </ng-container>
+      
+          <ng-container matColumnDef="policyType">
+            <th mat-header-cell *matHeaderCellDef> Policy Type </th>
+            <td mat-cell *matCellDef="let policy"> {{ policy.policyType }} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="policyStartDate">
+            <th mat-header-cell *matHeaderCellDef> Policy Start Date </th>
+            <td mat-cell *matCellDef="let policy"> {{ policy.policyStartDate }} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="policyEndDate">
+            <th mat-header-cell *matHeaderCellDef> Policy End Date </th>
+            <td mat-cell *matCellDef="let policy"> {{ policy.policyEndDate }} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let policy"> {{ policy.status }} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <!-- <h3> Add New Policy</h3>
+        <form (ngSubmit)="addPolicy()" style="display: flex; flex-direction: column; gap: 10px; max-width: 600px">
+            <mat-form-field>
+                <mat-label>Policy Number</mat-label>
+                <input matInput type="text" id="policyId" name="policyId" [(ngModel)]="policyData.policyId" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Policy Holder</mat-label>
+                <input matInput type="text" id="policyHolder" name="policyHolder" [(ngModel)]="policyData.policyHolder" required>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Coverage Amount</mat-label>
+                <input matInput type="number" id="coverageAmount" name="coverageAmount" [(ngModel)]="policyData.coverageAmount" required>
+            </mat-form-field>
+
+            <button mat-button color="primary" type="submit">Submit Policy</button>
+        </form> -->
+      </div>

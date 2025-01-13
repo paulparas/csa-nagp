@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { PremiumPaymentComponent } from './premium-payment.component';
+
+describe('PremiumPaymentComponent', () => {
+  let component: PremiumPaymentComponent;
+  let fixture: ComponentFixture<PremiumPaymentComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [PremiumPaymentComponent]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(PremiumPaymentComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
